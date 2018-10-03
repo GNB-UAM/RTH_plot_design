@@ -21,3 +21,6 @@ pyuic5 rth_plot/mainwindow.ui -o plot_lib/plot_interface.py
 
 ## How to include in RTHybrid
 Just need to copy plot.pyw, LAUNCH_Plot.sh and plot_lib folder in RTHybrid root folder
+
+## Python requirements
+...
