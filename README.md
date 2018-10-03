@@ -6,7 +6,9 @@ For more information about RTHybrid please check out:
 
 #### https://github.com/GNB-UAM/RTHybrid
 
-##### Note: Stable code of this repository is included in RTHybrid and is the one to use
+#### Note: 
+##### - Read RTHybrid project to use and cite this work
+##### - Stable code of this repository is included in RTHybrid and is the one to use
 
 ## About
 - Qt Creator is use to design rth_plot/mainwindow.ui
