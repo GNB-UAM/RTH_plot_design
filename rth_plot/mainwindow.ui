@@ -60,41 +60,6 @@
       <string>Select file</string>
      </property>
     </widget>
-    <widget class="QTextBrowser" name="textBrowser_2">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>401</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:600; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;PLOT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
     <widget class="QFrame" name="frame_3">
      <property name="geometry">
       <rect>
@@ -449,7 +414,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Write route or use select buttons...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Select file...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_selectlast">
@@ -514,7 +479,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>20</x>
         <y>10</y>
-        <width>101</width>
+        <width>111</width>
         <height>31</height>
        </rect>
       </property>
@@ -607,7 +572,7 @@ p, li { white-space: pre-wrap; }
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="label_time">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -625,7 +590,7 @@ p, li { white-space: pre-wrap; }
        </font>
       </property>
       <property name="text">
-       <string>Time: - s</string>
+       <string>Duration</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -654,7 +619,30 @@ p, li { white-space: pre-wrap; }
       <string>Plot</string>
      </property>
     </widget>
-    <zorder>textBrowser_2</zorder>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>401</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>PLOT</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
     <zorder>frame_4</zorder>
     <zorder>textBrowser_3</zorder>
     <zorder>textEdit_experiment</zorder>
@@ -666,6 +654,7 @@ p, li { white-space: pre-wrap; }
     <zorder>frame_6</zorder>
     <zorder>frame_7</zorder>
     <zorder>pushButton_plot</zorder>
+    <zorder>label_3</zorder>
    </widget>
    <widget class="QFrame" name="frame_log">
     <property name="geometry">
@@ -704,39 +693,28 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
     </widget>
-    <widget class="QTextBrowser" name="textBrowser_6">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
+    <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>581</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <pointsize>16</pointsize>
        <weight>75</weight>
        <bold>true</bold>
+       <underline>false</underline>
       </font>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+     <property name="text">
+      <string>LOG FILE</string>
      </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:600; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;LOG FILE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -795,7 +773,7 @@ p, li { white-space: pre-wrap; }
     </hint>
     <hint type="destinationlabel">
      <x>221</x>
-     <y>376</y>
+     <y>386</y>
     </hint>
    </hints>
   </connection>
@@ -839,7 +817,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>70</x>
-     <y>389</y>
+     <y>399</y>
     </hint>
     <hint type="destinationlabel">
      <x>266</x>
@@ -871,7 +849,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>91</x>
-     <y>341</y>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
      <x>219</x>
@@ -887,7 +865,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>75</x>
-     <y>344</y>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
      <x>220</x>
@@ -939,7 +917,7 @@ p, li { white-space: pre-wrap; }
     </hint>
     <hint type="destinationlabel">
      <x>289</x>
-     <y>381</y>
+     <y>391</y>
     </hint>
    </hints>
   </connection>
@@ -951,7 +929,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>60</x>
-     <y>345</y>
+     <y>355</y>
     </hint>
     <hint type="destinationlabel">
      <x>375</x>
