@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1123</width>
-    <height>718</height>
+    <width>1401</width>
+    <height>789</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,15 +18,15 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(114, 159, 207)</string>
+    <string notr="true">background-color:rgb(29, 183, 183)</string>
    </property>
    <widget class="QFrame" name="frame_control">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>10</x>
+      <y>10</y>
       <width>441</width>
-      <height>681</height>
+      <height>771</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -42,7 +42,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>90</y>
+       <y>70</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -64,7 +64,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>240</y>
        <width>401</width>
        <height>121</height>
       </rect>
@@ -315,7 +315,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>430</y>
+       <y>370</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -368,31 +368,11 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
-    <widget class="QTextBrowser" name="textBrowser_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>50</y>
-       <width>121</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Experiment:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="textEdit_experiment">
+    <widget class="QTextBrowser" name="textBrowser_experiment">
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>90</y>
+       <y>70</y>
        <width>271</width>
        <height>71</height>
       </rect>
@@ -401,10 +381,12 @@ p, li { white-space: pre-wrap; }
       <font>
        <family>DejaVu Sans</family>
        <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::Box</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
@@ -413,7 +395,7 @@ p, li { white-space: pre-wrap; }
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:11pt; font-weight:600; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Select file...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
@@ -421,7 +403,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
+       <y>110</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -443,7 +425,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>250</y>
+       <y>210</y>
        <width>121</width>
        <height>31</height>
       </rect>
@@ -463,7 +445,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>280</x>
-       <y>430</y>
+       <y>370</y>
        <width>141</width>
        <height>51</height>
       </rect>
@@ -498,7 +480,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>180</y>
+       <y>150</y>
        <width>251</width>
        <height>51</height>
       </rect>
@@ -561,7 +543,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>290</x>
-       <y>180</y>
+       <y>150</y>
        <width>131</width>
        <height>51</height>
       </rect>
@@ -601,7 +583,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>630</y>
+       <y>720</y>
        <width>151</width>
        <height>31</height>
       </rect>
@@ -623,7 +605,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>10</y>
+       <y>20</y>
        <width>401</width>
        <height>41</height>
       </rect>
@@ -644,8 +626,7 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
     <zorder>frame_4</zorder>
-    <zorder>textBrowser_3</zorder>
-    <zorder>textEdit_experiment</zorder>
+    <zorder>textBrowser_experiment</zorder>
     <zorder>pushButton_selectlast</zorder>
     <zorder>textBrowser_7</zorder>
     <zorder>frame_3</zorder>
@@ -659,10 +640,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QFrame" name="frame_log">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>20</y>
-      <width>621</width>
-      <height>681</height>
+      <x>460</x>
+      <y>10</y>
+      <width>461</width>
+      <height>771</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -677,13 +658,13 @@ p, li { white-space: pre-wrap; }
     <property name="lineWidth">
      <number>0</number>
     </property>
-    <widget class="QTextEdit" name="textEdit_log">
+    <widget class="QTextBrowser" name="textBrowser_log">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>60</y>
-       <width>581</width>
-       <height>551</height>
+       <y>70</y>
+       <width>421</width>
+       <height>651</height>
       </rect>
      </property>
      <property name="font">
@@ -698,8 +679,8 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>20</x>
        <y>10</y>
-       <width>581</width>
-       <height>41</height>
+       <width>201</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="font">
@@ -711,34 +692,287 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="text">
-      <string>LOG FILE</string>
+      <string>Day resume</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QFrame" name="frame_log_2">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>50</y>
+       <width>501</width>
+       <height>681</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgb(255, 255, 255)</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <widget class="QTextEdit" name="textEdit_log_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>461</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>LOG FILE</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>730</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>730</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;Note: day resume is managed by RTHybrid main program and can not be edited here.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_savelog_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>20</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgb(238, 238, 236)</string>
+     </property>
+     <property name="text">
+      <string>Reload</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_savelog">
+   <widget class="QFrame" name="frame_log_3">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>650</y>
-      <width>131</width>
-      <height>31</height>
+      <x>930</x>
+      <y>10</y>
+      <width>461</width>
+      <height>771</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
     <property name="styleSheet">
-     <string notr="true">background:rgb(238, 238, 236)</string>
+     <string notr="true">background:rgb(255, 255, 255)</string>
     </property>
-    <property name="text">
-     <string>Save file</string>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <widget class="QTextEdit" name="textEdit_log_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>421</width>
+       <height>681</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Experiment notes</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_log_4">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>50</y>
+       <width>501</width>
+       <height>681</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgb(255, 255, 255)</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <widget class="QTextEdit" name="textEdit_log_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>461</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>LOG FILE</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_savelog">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>20</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgb(238, 238, 236)</string>
+     </property>
+     <property name="text">
+      <string>Save file</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

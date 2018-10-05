@@ -29,7 +29,7 @@ class Interface(QtWidgets.QMainWindow):
 	#  Funcs for custom actions  #
 	##############################
 	def pyplot_call(self):
-		self.current_path = self.ui.textEdit_experiment.toPlainText()
+		self.current_path = self.ui.textBrowser_experiment.toPlainText()
 		error_plot='None'
 		program  = 'python3 plot_lib/plot.py'
 
@@ -37,7 +37,7 @@ class Interface(QtWidgets.QMainWindow):
 		program += ' -f ' + self.current_path
 		if self.current_path=='' or self.current_path==self.path_text:
 			error_plot='You have to select a file'
-			self.ui.textEdit_experiment.setPlainText( self.path_text )
+			self.ui.textBrowser_experiment.setPlainText( self.path_text )
 
 		# Jump points
 		program += ' -j ' + str( self.ui.JumpPointsValue.value() )
@@ -74,7 +74,7 @@ class Interface(QtWidgets.QMainWindow):
 				exit()
 
 	def file_explorer(self):
-		self.current_path = self.ui.textEdit_experiment.toPlainText()
+		self.current_path = self.ui.textBrowser_experiment.toPlainText()
 		if self.current_path.find('s_data.txt') != -1:
 			# We want to stay in the same day
 			result = self.current_path.split('/')[-2]
@@ -84,16 +84,25 @@ class Interface(QtWidgets.QMainWindow):
 			# No day choose yet
 			filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Select file', 'data', 'Text files (*.txt);;All files (*)')[0]
 		
-		self.ui.textEdit_experiment.setPlainText(filename)
-		self.current_path = self.ui.textEdit_experiment.toPlainText()
+		
+
+		if filename == '':
+			# Bad
+			self.ui.textBrowser_experiment.setPlainText(self.path_text)
+			self.current_path = self.path_text
+		else:
+			# Good
+			self.ui.textBrowser_experiment.setPlainText(filename)
+			self.current_path = filename
+	
 
 	def get_last(self):
 		folders = [f for f in os.listdir('data') if os.path.dirname(os.path.join('data', f))]
 		folders.sort(key=lambda x: os.path.getmtime('data/'+x))
 		onlyfiles = [f for f in os.listdir('data/'+folders[-1]) if os.path.isfile(os.path.join('data/'+folders[-1], f))]
 		onlyfiles.sort(key=lambda x: os.path.getmtime('data/'+folders[-1]+'/'+x))
-		self.ui.textEdit_experiment.setPlainText(os.getcwd()+"/data/"+folders[-1]+'/'+onlyfiles[-1])
-		self.current_path = self.ui.textEdit_experiment.toPlainText()
+		self.ui.textBrowser_experiment.setPlainText(os.getcwd()+"/data/"+folders[-1]+'/'+onlyfiles[-1])
+		self.current_path = self.ui.textBrowser_experiment.toPlainText()
 
 	def cal_time(self):
 		if self.current_path=='' or self.current_path==self.path_text:

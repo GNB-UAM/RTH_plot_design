@@ -63,7 +63,6 @@ class DataStruct1():
 		#READ DATA
 		dataset = pd.read_csv(filename, delimiter=' ', header=1+args.start, nrows=args.end - args.start)
 		data = dataset.values
-		print(data)
 
 		self.data_in = []
 		self.time           = data[:,0][::args.jump] / 1000
