@@ -509,6 +509,9 @@ p, li { white-space: pre-wrap; }
       <property name="styleSheet">
        <string notr="true">background:rgb(255, 255, 255)</string>
       </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
       <property name="maximum">
        <number>99999</number>
       </property>
@@ -572,7 +575,7 @@ p, li { white-space: pre-wrap; }
        </font>
       </property>
       <property name="text">
-       <string>Duration</string>
+       <string>-</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -637,7 +640,7 @@ p, li { white-space: pre-wrap; }
     <zorder>pushButton_plot</zorder>
     <zorder>label_3</zorder>
    </widget>
-   <widget class="QFrame" name="frame_log">
+   <widget class="QFrame" name="frame_resume">
     <property name="geometry">
      <rect>
       <x>460</x>
@@ -658,7 +661,10 @@ p, li { white-space: pre-wrap; }
     <property name="lineWidth">
      <number>0</number>
     </property>
-    <widget class="QTextBrowser" name="textBrowser_log">
+    <widget class="QTextBrowser" name="textBrowser_resume">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -672,6 +678,11 @@ p, li { white-space: pre-wrap; }
        <family>DejaVu Sans</family>
        <pointsize>13</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:disabled rgb(246, 246, 246);
+background-color:enabled rgb(255, 255, 255) ;
+</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -696,107 +707,6 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QFrame" name="frame_log_2">
-     <property name="geometry">
-      <rect>
-       <x>500</x>
-       <y>50</y>
-       <width>501</width>
-       <height>681</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background:rgb(255, 255, 255)</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <widget class="QTextEdit" name="textEdit_log_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>461</width>
-        <height>551</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>DejaVu Sans</family>
-        <pointsize>13</pointsize>
-       </font>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>461</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>false</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>LOG FILE</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>730</y>
-       <width>381</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QTextBrowser" name="textBrowser_3">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>730</y>
-       <width>281</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;Note: day resume is managed by RTHybrid main program and can not be edited here.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_savelog_2">
@@ -824,8 +734,31 @@ p, li { white-space: pre-wrap; }
       <string>Reload</string>
      </property>
     </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>730</y>
+       <width>301</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;Note: day resume is managed by RTHybrid main program and can not be edited here.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QFrame" name="frame_log_3">
+   <widget class="QFrame" name="frame_notes">
     <property name="geometry">
      <rect>
       <x>930</x>
@@ -846,7 +779,10 @@ p, li { white-space: pre-wrap; }
     <property name="lineWidth">
      <number>0</number>
     </property>
-    <widget class="QTextEdit" name="textEdit_log_3">
+    <widget class="QTextEdit" name="textEdit_notes">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -860,6 +796,11 @@ p, li { white-space: pre-wrap; }
        <family>DejaVu Sans</family>
        <pointsize>13</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:disabled rgb(246, 246, 246);
+background-color:enabled rgb(255, 255, 255) ;
+</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -886,69 +827,7 @@ p, li { white-space: pre-wrap; }
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QFrame" name="frame_log_4">
-     <property name="geometry">
-      <rect>
-       <x>500</x>
-       <y>50</y>
-       <width>501</width>
-       <height>681</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background:rgb(255, 255, 255)</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
-     <widget class="QTextEdit" name="textEdit_log_4">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>60</y>
-        <width>461</width>
-        <height>551</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>DejaVu Sans</family>
-        <pointsize>13</pointsize>
-       </font>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_7">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>461</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>false</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>LOG FILE</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="pushButton_savelog">
+    <widget class="QPushButton" name="pushButton_savenotes">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -986,12 +865,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>128</x>
-     <y>391</y>
+     <x>129</x>
+     <y>353</y>
     </hint>
     <hint type="destinationlabel">
-     <x>222</x>
-     <y>344</y>
+     <x>223</x>
+     <y>301</y>
     </hint>
    </hints>
   </connection>
@@ -1002,12 +881,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>156</x>
-     <y>390</y>
+     <x>157</x>
+     <y>353</y>
     </hint>
     <hint type="destinationlabel">
-     <x>221</x>
-     <y>386</y>
+     <x>222</x>
+     <y>364</y>
     </hint>
    </hints>
   </connection>
@@ -1018,12 +897,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>108</x>
-     <y>394</y>
+     <x>109</x>
+     <y>353</y>
     </hint>
     <hint type="destinationlabel">
-     <x>276</x>
-     <y>334</y>
+     <x>277</x>
+     <y>294</y>
     </hint>
    </hints>
   </connection>
@@ -1034,12 +913,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>72</x>
-     <y>392</y>
+     <x>73</x>
+     <y>353</y>
     </hint>
     <hint type="destinationlabel">
-     <x>361</x>
-     <y>339</y>
+     <x>362</x>
+     <y>294</y>
     </hint>
    </hints>
   </connection>
@@ -1050,12 +929,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>70</x>
-     <y>399</y>
+     <x>71</x>
+     <y>353</y>
     </hint>
     <hint type="destinationlabel">
-     <x>266</x>
-     <y>392</y>
+     <x>267</x>
+     <y>347</y>
     </hint>
    </hints>
   </connection>
@@ -1066,12 +945,12 @@ p, li { white-space: pre-wrap; }
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>78</x>
-     <y>394</y>
+     <x>79</x>
+     <y>353</y>
     </hint>
     <hint type="destinationlabel">
-     <x>367</x>
-     <y>387</y>
+     <x>368</x>
+     <y>347</y>
     </hint>
    </hints>
   </connection>
@@ -1082,12 +961,12 @@ p, li { white-space: pre-wrap; }
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>91</x>
-     <y>351</y>
+     <x>92</x>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
-     <x>219</x>
-     <y>339</y>
+     <x>220</x>
+     <y>301</y>
     </hint>
    </hints>
   </connection>
@@ -1098,12 +977,12 @@ p, li { white-space: pre-wrap; }
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>75</x>
-     <y>354</y>
+     <x>76</x>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
-     <x>220</x>
-     <y>393</y>
+     <x>221</x>
+     <y>364</y>
     </hint>
    </hints>
   </connection>
@@ -1114,12 +993,12 @@ p, li { white-space: pre-wrap; }
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>94</x>
-     <y>347</y>
+     <x>95</x>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
-     <x>272</x>
-     <y>333</y>
+     <x>273</x>
+     <y>294</y>
     </hint>
    </hints>
   </connection>
@@ -1130,12 +1009,12 @@ p, li { white-space: pre-wrap; }
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>61</x>
-     <y>349</y>
+     <x>62</x>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
-     <x>368</x>
-     <y>338</y>
+     <x>369</x>
+     <y>294</y>
     </hint>
    </hints>
   </connection>
@@ -1146,12 +1025,12 @@ p, li { white-space: pre-wrap; }
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>65</x>
-     <y>347</y>
+     <x>66</x>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
-     <x>289</x>
-     <y>391</y>
+     <x>288</x>
+     <y>347</y>
     </hint>
    </hints>
   </connection>
@@ -1162,12 +1041,12 @@ p, li { white-space: pre-wrap; }
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>60</x>
-     <y>355</y>
+     <x>61</x>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
-     <x>375</x>
-     <y>385</y>
+     <x>376</x>
+     <y>347</y>
     </hint>
    </hints>
   </connection>

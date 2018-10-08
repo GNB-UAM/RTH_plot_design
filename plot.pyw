@@ -13,29 +13,28 @@ class Interface(QtWidgets.QMainWindow):
 
 		# Init and variables
 		self.path_text = 'Select file...'
-		self.current_path = self.path_text
+		self.filename = self.path_text
+		self.filenotes = ''
 
 		# Buttons conectors
 		self.ui.pushButton_plot.clicked.connect(self.pyplot_call)
 		self.ui.pushButton_selectfile.clicked.connect(self.file_explorer)
 		self.ui.pushButton_selectlast.clicked.connect(self.get_last)
-
-		self.ui.pushButton_selectlast.clicked.connect(self.cal_time)
-		self.ui.pushButton_selectfile.clicked.connect(self.cal_time)
+		self.ui.pushButton_savenotes.clicked.connect(self.save_file)
 		self.ui.frecuency.valueChanged.connect(self.cal_time)
 
 
-	##############################
-	#  Funcs for custom actions  #
-	##############################
+	#########################
+	#   Plot program call   #
+	#########################
 	def pyplot_call(self):
-		self.current_path = self.ui.textBrowser_experiment.toPlainText()
+		self.filename = self.ui.textBrowser_experiment.toPlainText()
 		error_plot='None'
 		program  = 'python3 plot_lib/plot.py'
 
 		# File to plot
-		program += ' -f ' + self.current_path
-		if self.current_path=='' or self.current_path==self.path_text:
+		program += ' -f ' + self.filename
+		if self.filename == self.path_text:
 			error_plot='You have to select a file'
 			self.ui.textBrowser_experiment.setPlainText( self.path_text )
 
@@ -73,52 +72,102 @@ class Interface(QtWidgets.QMainWindow):
 				os.system(program)
 				exit()
 
-	def file_explorer(self):
-		self.current_path = self.ui.textBrowser_experiment.toPlainText()
-		if self.current_path.find('s_data.txt') != -1:
-			# We want to stay in the same day
-			result = self.current_path.split('/')[-2]
-			filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Select file', 'data/'+result, 'Text files (*.txt);;All files (*)')[0]
+	##############################
+	#  Funcs for custom actions  #
+	##############################
 
+	def file_explorer(self):
+		self.filename = self.ui.textBrowser_experiment.toPlainText()
+
+		if self.filename.find('s_data.txt') != -1:
+			# We want to stay in the same day
+			result = self.filename.split('/')[-2]
+			self.filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Select file', 'data/'+result, 'Text files (*_data.txt);;All files (*)')[0]
 		else:
 			# No day choose yet
-			filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Select file', 'data', 'Text files (*.txt);;All files (*)')[0]
+			self.filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Select file', 'data', 'Text files (*_data.txt);;All files (*)')[0]
 		
-		
-
-		if filename == '':
-			# Bad
-			self.ui.textBrowser_experiment.setPlainText(self.path_text)
-			self.current_path = self.path_text
-		else:
-			# Good
-			self.ui.textBrowser_experiment.setPlainText(filename)
-			self.current_path = filename
-	
+		self.init_experiment()
 
 	def get_last(self):
+		# Get last day
 		folders = [f for f in os.listdir('data') if os.path.dirname(os.path.join('data', f))]
 		folders.sort(key=lambda x: os.path.getmtime('data/'+x))
-		onlyfiles = [f for f in os.listdir('data/'+folders[-1]) if os.path.isfile(os.path.join('data/'+folders[-1], f))]
-		onlyfiles.sort(key=lambda x: os.path.getmtime('data/'+folders[-1]+'/'+x))
-		self.ui.textBrowser_experiment.setPlainText(os.getcwd()+"/data/"+folders[-1]+'/'+onlyfiles[-1])
-		self.current_path = self.ui.textBrowser_experiment.toPlainText()
 
-	def cal_time(self):
-		if self.current_path=='' or self.current_path==self.path_text:
-			self.ui.label_time.setText('Duration')
+		# No days
+		if len(folders)==0:
+			self.ui.pushButton_savenotes.setDisabled(True)
+			self.filename = self.path_text
 			return
 
-		num_lines = sum(1 for line in open(self.current_path)) - 1
-		segs = int (num_lines / self.ui.frecuency.value())
+		# Get las file of the day
+		onlyfiles = [f for f in os.listdir('data/'+folders[-1]) if os.path.isfile(os.path.join('data/'+folders[-1], f)) and f.find('_log.txt')==-1 ]
+		onlyfiles.sort(key=lambda x: os.path.getmtime('data/'+folders[-1]+'/'+x))
+
+		self.filename = os.getcwd()+"/data/"+folders[-1]+'/'+onlyfiles[-1]
+		self.init_experiment()
+
+	def init_experiment(self):
+		if self.filename=='' or self.filename==self.path_text:
+			# Bad
+			self.ui.textBrowser_experiment.setPlainText(self.path_text)
+			self.filename = self.path_text
+
+			# Notes
+			self.ui.pushButton_savenotes.setDisabled(True)
+			self.ui.textEdit_notes.setDisabled(True)
+
+			self.filenotes = ''
+			self.ui.textEdit_notes.setPlainText('')
+
+		else:
+			# Good
+			self.ui.textBrowser_experiment.setPlainText(self.filename)
+			self.num_lines = sum(1 for line in open(self.filename)) - 1
+
+			# Notes
+			self.ui.pushButton_savenotes.setEnabled(True)
+			self.ui.textEdit_notes.setEnabled(True)
+
+			self.exp_notes()
 	
+		self.cal_time()
+		
+
+	def exp_notes(self):
+		# File exist?
+		self.filenotes = self.filename[:-8]+'log.txt'
+		
+		txt=''
+
+		if os.path.isfile(self.filenotes) == False:
+			txt = '-------------------------------------------------------------------\n'+self.filenotes+'\n-------------------------------------------------------------------\n\n'
+		else:
+			with open(self.filenotes, 'r') as f:
+				txt = f.read()
+		self.ui.textEdit_notes.setText( txt )
+
+	def save_file(self):
+		with open(self.filenotes, 'w') as f:
+			f.write( self.ui.textEdit_notes.toPlainText() )
+
+	def cal_time(self):
+		if self.filename == self.path_text:
+			self.ui.label_time.setText('-')
+			return
+
+		segs = int (self.num_lines / self.ui.frecuency.value())
 		if segs > 59:
 			mins = int (segs/60)
-			segs = int (segs-(mins*60))
+			segs = segs-(mins*60)
 			self.ui.label_time.setText(str(mins)+'m '+str(segs)+'s')
 		else:
 			self.ui.label_time.setText(str(segs)+'s')
 
+
+############
+#   MAIN   #
+############
 if __name__ == "__main__":
 	app = QtWidgets.QApplication(sys.argv)
 
