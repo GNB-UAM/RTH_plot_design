@@ -69,6 +69,9 @@
        <height>121</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250);</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -100,7 +103,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background:rgb(255, 255, 255)</string>
+          <string notr="true">background-color: rgb(250, 250, 250);</string>
          </property>
          <property name="text">
           <string>Plot all file</string>
@@ -119,7 +122,7 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">background:rgb(255, 255, 255)</string>
+          <string notr="true">background-color: rgb(250, 250, 250);</string>
          </property>
          <property name="text">
           <string>Select time</string>
@@ -144,7 +147,7 @@
           <bool>true</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">background:rgb(255, 255, 255)</string>
+          <string notr="true">background-color: rgb(250, 250, 250);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -226,7 +229,7 @@ p, li { white-space: pre-wrap; }
        <item>
         <widget class="QFrame" name="frame_to">
          <property name="styleSheet">
-          <string notr="true">background:rgb(255, 255, 255)</string>
+          <string notr="true">background-color: rgb(250, 250, 250);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -250,6 +253,9 @@ p, li { white-space: pre-wrap; }
            <font>
             <family>Monospace</family>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(250, 250, 250);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>
@@ -320,6 +326,9 @@ p, li { white-space: pre-wrap; }
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250);</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -385,11 +394,14 @@ p, li { white-space: pre-wrap; }
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250);</string>
+     </property>
      <property name="frameShape">
-      <enum>QFrame::Box</enum>
+      <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
+      <enum>QFrame::Raised</enum>
      </property>
      <property name="html">
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -450,6 +462,9 @@ p, li { white-space: pre-wrap; }
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250);</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -484,6 +499,9 @@ p, li { white-space: pre-wrap; }
        <width>251</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -551,6 +569,9 @@ p, li { white-space: pre-wrap; }
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(250, 250, 250);</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -594,14 +615,16 @@ p, li { white-space: pre-wrap; }
      <property name="font">
       <font>
        <family>DejaVu Sans</family>
-       <pointsize>11</pointsize>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">background:rgb(238, 238, 236)</string>
      </property>
      <property name="text">
-      <string>Plot</string>
+      <string>Plot!</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
@@ -653,13 +676,13 @@ p, li { white-space: pre-wrap; }
      <string notr="true">background:rgb(255, 255, 255)</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
+     <enum>QFrame::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
+     <enum>QFrame::Raised</enum>
     </property>
     <property name="lineWidth">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QTextBrowser" name="textBrowser_resume">
      <property name="enabled">
@@ -680,9 +703,13 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:disabled rgb(246, 246, 246);
-background-color:enabled rgb(255, 255, 255) ;
-</string>
+      <string notr="true">background-color: rgb(230, 230, 230);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -709,7 +736,7 @@ background-color:enabled rgb(255, 255, 255) ;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_savelog_2">
+    <widget class="QPushButton" name="pushButton_reload">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -739,7 +766,7 @@ background-color:enabled rgb(255, 255, 255) ;
       <rect>
        <x>90</x>
        <y>730</y>
-       <width>301</width>
+       <width>321</width>
        <height>41</height>
       </rect>
      </property>
@@ -754,7 +781,8 @@ background-color:enabled rgb(255, 255, 255) ;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;Note: day resume is managed by RTHybrid main program and can not be edited here.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;Note: day resume is managed by RTHybrid&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;main program and can not be edited here.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
@@ -771,7 +799,7 @@ p, li { white-space: pre-wrap; }
      <string notr="true">background:rgb(255, 255, 255)</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
+     <enum>QFrame::Box</enum>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
@@ -798,9 +826,13 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:disabled rgb(246, 246, 246);
-background-color:enabled rgb(255, 255, 255) ;
-</string>
+      <string notr="true">background-color: rgb(230, 230, 230);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -846,7 +878,7 @@ background-color:enabled rgb(255, 255, 255) ;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:rgb(238, 238, 236)</string>
+      <string notr="true">background:rgb(168, 191, 79);</string>
      </property>
      <property name="text">
       <string>Save file</string>

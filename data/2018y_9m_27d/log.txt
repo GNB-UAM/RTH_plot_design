@@ -1,0 +1,192 @@
+
+******* Clamp experiment data/2018y_9m_27d/16h_41m_32s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.727 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/16h_45m_23s ******* 
+Model = 1 
+Synapse = 2 
+Firing rate = 0.667 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/16h_47m_30s ******* 
+Model = 1 
+Synapse = 2 
+Firing rate = 0.625 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/16h_48m_42s ******* 
+Model = 2 
+Synapse = 2 
+Firing rate = 0.667 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/16h_51m_27s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.625 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/16h_57m_5s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.588 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_5m_7s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_7m_10s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_11m_12s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_25m_35s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_32m_12s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_34m_38s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_36m_12s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_38m_42s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_43m_22s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_48m_6s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_50m_39s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_54m_3s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_56m_22s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/17h_59m_58s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/18h_1m_37s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/18h_4m_47s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/18h_10m_15s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/18h_12m_46s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/18h_16m_39s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/18h_19m_7s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.556 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/18h_36m_15s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.526 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/19h_11m_4s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.476 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/19h_41m_52s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.400 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/19h_47m_3s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.500 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/19h_51m_0s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.476 
+*************
+
+******* Clamp experiment data/2018y_9m_27d/20h_19m_4s ******* 
+Model = 4 
+Synapse = 2 
+Firing rate = 0.435 
+*************

@@ -15,12 +15,14 @@ class Interface(QtWidgets.QMainWindow):
 		self.path_text = 'Select file...'
 		self.filename = self.path_text
 		self.filenotes = ''
+		self.day_route = None
 
 		# Buttons conectors
 		self.ui.pushButton_plot.clicked.connect(self.pyplot_call)
 		self.ui.pushButton_selectfile.clicked.connect(self.file_explorer)
 		self.ui.pushButton_selectlast.clicked.connect(self.get_last)
 		self.ui.pushButton_savenotes.clicked.connect(self.save_file)
+		self.ui.pushButton_reload.clicked.connect(self.day_resume_reload)
 		self.ui.frecuency.valueChanged.connect(self.cal_time)
 
 
@@ -101,7 +103,7 @@ class Interface(QtWidgets.QMainWindow):
 			return
 
 		# Get las file of the day
-		onlyfiles = [f for f in os.listdir('data/'+folders[-1]) if os.path.isfile(os.path.join('data/'+folders[-1], f)) and f.find('_log.txt')==-1 ]
+		onlyfiles = [f for f in os.listdir('data/'+folders[-1]) if os.path.isfile(os.path.join('data/'+folders[-1], f)) and f.find('_data.txt')!=-1]
 		onlyfiles.sort(key=lambda x: os.path.getmtime('data/'+folders[-1]+'/'+x))
 
 		self.filename = os.getcwd()+"/data/"+folders[-1]+'/'+onlyfiles[-1]
@@ -116,6 +118,7 @@ class Interface(QtWidgets.QMainWindow):
 			# Notes
 			self.ui.pushButton_savenotes.setDisabled(True)
 			self.ui.textEdit_notes.setDisabled(True)
+			self.ui.textEdit_notes.setStyleSheet("background-color: rgb(235, 235, 235);")
 
 			self.filenotes = ''
 			self.ui.textEdit_notes.setPlainText('')
@@ -128,18 +131,36 @@ class Interface(QtWidgets.QMainWindow):
 			# Notes
 			self.ui.pushButton_savenotes.setEnabled(True)
 			self.ui.textEdit_notes.setEnabled(True)
+			self.ui.textEdit_notes.setStyleSheet("background-color: rgb(245, 245, 245);")
 
 			self.exp_notes()
+			self.day_resume()
 	
 		self.cal_time()
 		
-
-	def exp_notes(self):
-		# File exist?
-		self.filenotes = self.filename[:-8]+'log.txt'
-		
+	def day_resume(self):
+		tam = len (self.filenotes.split('/')[-1:][0]) + 1
+		self.day_route = self.filename[:-tam]+'log.txt'
 		txt=''
+		with open(self.day_route, 'r') as f:
+			txt = f.read()
+		self.ui.textBrowser_resume.setText(txt)
+		self.ui.textBrowser_resume.setEnabled(True)
+		self.ui.pushButton_reload.setEnabled(True)
 
+		self.ui.textBrowser_resume.setStyleSheet("background-color: rgb(245, 245, 245);")
+		self.ui.textBrowser_resume.verticalScrollBar().setValue(self.ui.textBrowser_resume.verticalScrollBar().maximum())
+
+	def day_resume_reload(self):
+		txt=''
+		with open(self.day_route, 'r') as f:
+			txt = f.read()
+		self.ui.textBrowser_resume.setText( txt )
+		self.ui.textBrowser_resume.verticalScrollBar().setValue(self.ui.textBrowser_resume.verticalScrollBar().maximum())
+	
+	def exp_notes(self):
+		self.filenotes = self.filename[:-8]+'log.txt'
+		txt=''
 		if os.path.isfile(self.filenotes) == False:
 			txt = '-------------------------------------------------------------------\n'+self.filenotes+'\n-------------------------------------------------------------------\n\n'
 		else:
