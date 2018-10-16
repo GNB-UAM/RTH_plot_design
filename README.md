@@ -9,7 +9,6 @@ For more information about full RTHybrid please check out:
 
 #### https://github.com/GNB-UAM/RTHybrid 
 
-#### Note: 
 ##### - Read RTHybrid project to use and cite this work
 ##### - Stable code of this repository is included in RTHybrid and is the one to use
 
@@ -23,7 +22,10 @@ pyuic5 rth_plot/mainwindow.ui -o plot_lib/plot_interface.py
 - plot_lib/ contains also the rest of the code use for plots
 
 ## How to include in RTHybrid
-Just need to copy plot_main.pyw, plot.sh and plot_lib folder in RTHybrid root folder
+Just copy these files in RTHybrid root folder:
+- plot_main.pyw
+- plot.sh
+- /plot_lib folder
 
 ## Requirements
 - Qt5
