@@ -190,3 +190,4 @@ Model = 4
 Synapse = 2 
 Firing rate = 0.435 
 *************
+.

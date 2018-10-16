@@ -603,37 +603,13 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="pushButton_plot">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>720</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>DejaVu Sans</family>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background:rgb(238, 238, 236)</string>
-     </property>
-     <property name="text">
-      <string>Plot!</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>10</y>
        <width>401</width>
-       <height>41</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="font">
@@ -651,6 +627,33 @@ p, li { white-space: pre-wrap; }
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_plot">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>690</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Plot!</string>
+     </property>
+    </widget>
     <zorder>frame_4</zorder>
     <zorder>textBrowser_experiment</zorder>
     <zorder>pushButton_selectlast</zorder>
@@ -660,8 +663,8 @@ p, li { white-space: pre-wrap; }
     <zorder>frame_5</zorder>
     <zorder>frame_6</zorder>
     <zorder>frame_7</zorder>
-    <zorder>pushButton_plot</zorder>
     <zorder>label_3</zorder>
+    <zorder>pushButton_plot</zorder>
    </widget>
    <widget class="QFrame" name="frame_resume">
     <property name="geometry">
@@ -684,7 +687,7 @@ p, li { white-space: pre-wrap; }
     <property name="lineWidth">
      <number>1</number>
     </property>
-    <widget class="QTextBrowser" name="textBrowser_resume">
+    <widget class="QTextEdit" name="textEdit_resume">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -693,7 +696,7 @@ p, li { white-space: pre-wrap; }
        <x>20</x>
        <y>70</y>
        <width>421</width>
-       <height>641</height>
+       <height>581</height>
       </rect>
      </property>
      <property name="font">
@@ -711,13 +714,16 @@ p, li { white-space: pre-wrap; }
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
      </property>
+     <property name="textInteractionFlags">
+      <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+     </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>10</y>
-       <width>201</width>
+       <width>401</width>
        <height>51</height>
       </rect>
      </property>
@@ -742,9 +748,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="geometry">
       <rect>
-       <x>340</x>
+       <x>380</x>
        <y>20</y>
-       <width>81</width>
+       <width>41</width>
        <height>31</height>
       </rect>
      </property>
@@ -755,19 +761,22 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:rgb(238, 238, 236)</string>
+      <string notr="true"/>
      </property>
      <property name="text">
-      <string>Reload</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset theme="reload"/>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>720</y>
-       <width>321</width>
-       <height>41</height>
+       <x>30</x>
+       <y>670</y>
+       <width>411</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -781,10 +790,62 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;Note: day resume is managed by RTHybrid&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;main program and can not be edited here.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;Note: do not edit day resume if RTHybrid is running&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
+    <widget class="QCheckBox" name="edit_mode">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>710</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string> Edit mode</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_saveday">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>710</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Save file</string>
+     </property>
+    </widget>
+    <zorder>label_4</zorder>
+    <zorder>textEdit_resume</zorder>
+    <zorder>textEdit</zorder>
+    <zorder>pushButton_reload</zorder>
+    <zorder>edit_mode</zorder>
+    <zorder>pushButton_saveday</zorder>
    </widget>
    <widget class="QFrame" name="frame_notes">
     <property name="geometry">
@@ -816,7 +877,7 @@ p, li { white-space: pre-wrap; }
        <x>20</x>
        <y>70</y>
        <width>421</width>
-       <height>681</height>
+       <height>621</height>
       </rect>
      </property>
      <property name="font">
@@ -838,9 +899,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>10</y>
-       <width>281</width>
+       <width>401</width>
        <height>51</height>
       </rect>
      </property>
@@ -865,10 +926,10 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>20</y>
-       <width>81</width>
-       <height>31</height>
+       <x>180</x>
+       <y>710</y>
+       <width>101</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
@@ -878,7 +939,8 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:rgb(168, 191, 79);</string>
+      <string notr="true">
+</string>
      </property>
      <property name="text">
       <string>Save file</string>

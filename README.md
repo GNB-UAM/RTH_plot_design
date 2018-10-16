@@ -16,12 +16,12 @@ For more information about RTHybrid please check out:
 ```
 pyuic5 rth_plot/mainwindow.ui -o plot_lib/plot_interface.py
 ```
-- plot.pyw manage the interface and call plot_lib/plot.py (the final program)
+- plot_main.pyw manage the interface and call plot_lib/plot.py (the final program)
 - plot_lib/ contains also the rest of the code use for plots
 
 ## How to include in RTHybrid
-Just need to copy plot.pyw, LAUNCH_Plot.sh and plot_lib folder in RTHybrid root folder
+Just need to copy plot_main.pyw, plot.sh and plot_lib folder in RTHybrid root folder
 
-## Python requirements
+## Requirements
 - Qt5
 - Python libraries (matplotlib, pandas, numpy...). All included in Anaconda 
