@@ -1,10 +1,12 @@
-# RTH Plot Design
+<img src="logo.png?raw=true" width="100" height="100">
+
+# RTH Plot Design 
 Auxiliary Qt project to design and test the UI of the RTHybrid plot tool 
 
 ## RTHybrid
 For more information about RTHybrid please check out:
 
-#### https://github.com/GNB-UAM/RTHybrid
+#### https://github.com/GNB-UAM/RTHybrid 
 
 #### Note: 
 ##### - Read RTHybrid project to use and cite this work
