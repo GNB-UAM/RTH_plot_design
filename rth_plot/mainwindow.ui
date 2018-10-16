@@ -10,8 +10,24 @@
     <height>789</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1401</width>
+    <height>789</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1401</width>
+    <height>789</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>RTHybrid Plot Tool</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../logo.png</normaloff>../logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
