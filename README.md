@@ -1,6 +1,4 @@
-<img src="logo.png?raw=true" width="100" height="100">
-
-<a href="https://github.com/GNB-UAM/RTHybrid" target="_blank" rel="noopener noreferrer"> <img src="logo.png?raw=true" width="100" height="100"> </a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/GNB-UAM/RTHybrid"> <img src="logo.png?raw=true" width="100" height="100"> </a>
 
 # RTH Plot Design 
 Auxiliary Qt project to design and test the UI of the RTHybrid plot tool 
