@@ -1,11 +1,11 @@
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/GNB-UAM/RTHybrid"> <img src="logo.png?raw=true" width="100" height="100"> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/GNB-UAM"> <img src="gnb.png?raw=true" width="100" height="100"> </a>
 
-# RTH Plot Design 
-Auxiliary Qt project to design and test the UI of the RTHybrid plot tool 
+# RTHybrid Plot Designer 
+Auxiliary Qt project to design and test the UI of the RTHybrid Plot Tool
 
 ## RTHybrid
-For more information about RTHybrid please check out:
+For more information about full RTHybrid please check out:
 
 #### https://github.com/GNB-UAM/RTHybrid 
 
