@@ -10,7 +10,7 @@ class Interface(QtWidgets.QMainWindow):
 		QtWidgets.QMainWindow.__init__(self, parent)
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
-		self.setWindowIcon(QtGui.QIcon('logo.png'))
+		self.setWindowIcon(QtGui.QIcon('logo_rthy.png'))
 		self.show()
 
 		# Init and variables
