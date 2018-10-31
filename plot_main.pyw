@@ -11,6 +11,7 @@ class Interface(QtWidgets.QMainWindow):
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
 		self.setWindowIcon(QtGui.QIcon('logo_rthy.png'))
+		self.expand=False
 		self.show()
 
 		# Init and variables
@@ -30,6 +31,7 @@ class Interface(QtWidgets.QMainWindow):
 		self.ui.pushButton_reload.clicked.connect(self.day_resume_reload)
 		self.ui.frecuency.valueChanged.connect(self.cal_time)
 		self.ui.edit_mode.clicked.connect(self.editable_on)
+		self.ui.push_resize.clicked.connect(self.size)
 
 	#########################
 	#   Plot program call   #
@@ -228,14 +230,22 @@ class Interface(QtWidgets.QMainWindow):
 		else:
 			self.ui.label_time.setText(str(segs)+'s')
 
+	def size(self):
+		if self.expand==True:
+			self.resize(510,0)
+			self.expand=False
+		else:
+			self.resize(1450,0)
+			self.expand=True
+
+
 
 ############
 #   MAIN   #
 ############
 if __name__ == "__main__":
 	app = QtWidgets.QApplication(sys.argv)
-
 	myapp = Interface()
+	myapp.resize(510, 0)
 	myapp.show()
-
 	sys.exit(app.exec_())

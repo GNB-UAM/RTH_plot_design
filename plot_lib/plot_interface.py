@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rth_plot/mainwindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -11,9 +11,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1401, 789)
-        MainWindow.setMinimumSize(QtCore.QSize(1401, 789))
-        MainWindow.setMaximumSize(QtCore.QSize(1401, 789))
+        MainWindow.resize(1450, 789)
+        MainWindow.setMinimumSize(QtCore.QSize(510, 789))
+        MainWindow.setMaximumSize(QtCore.QSize(1450, 789))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -262,7 +262,7 @@ class Ui_MainWindow(object):
         self.label_3.raise_()
         self.pushButton_plot.raise_()
         self.frame_resume = QtWidgets.QFrame(self.centralWidget)
-        self.frame_resume.setGeometry(QtCore.QRect(460, 10, 461, 771))
+        self.frame_resume.setGeometry(QtCore.QRect(510, 10, 461, 771))
         self.frame_resume.setStyleSheet("background:rgb(255, 255, 255)")
         self.frame_resume.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_resume.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -331,7 +331,7 @@ class Ui_MainWindow(object):
         self.edit_mode.raise_()
         self.pushButton_saveday.raise_()
         self.frame_notes = QtWidgets.QFrame(self.centralWidget)
-        self.frame_notes.setGeometry(QtCore.QRect(930, 10, 461, 771))
+        self.frame_notes.setGeometry(QtCore.QRect(980, 10, 461, 771))
         self.frame_notes.setStyleSheet("background:rgb(255, 255, 255)")
         self.frame_notes.setFrameShape(QtWidgets.QFrame.Box)
         self.frame_notes.setFrameShadow(QtWidgets.QFrame.Plain)
@@ -365,9 +365,17 @@ class Ui_MainWindow(object):
         font.setFamily("DejaVu Sans")
         font.setPointSize(11)
         self.pushButton_savenotes.setFont(font)
-        self.pushButton_savenotes.setStyleSheet("\n"
-"")
+        self.pushButton_savenotes.setStyleSheet("")
         self.pushButton_savenotes.setObjectName("pushButton_savenotes")
+        self.push_resize = QtWidgets.QPushButton(self.centralWidget)
+        self.push_resize.setGeometry(QtCore.QRect(460, 370, 41, 51))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.push_resize.setFont(font)
+        self.push_resize.setStyleSheet("background:rgb(255, 255, 255)")
+        self.push_resize.setObjectName("push_resize")
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
@@ -428,4 +436,5 @@ class Ui_MainWindow(object):
         self.pushButton_saveday.setText(_translate("MainWindow", "Save file"))
         self.label_6.setText(_translate("MainWindow", "Experiment notes"))
         self.pushButton_savenotes.setText(_translate("MainWindow", "Save file"))
+        self.push_resize.setText(_translate("MainWindow", ">>"))
 

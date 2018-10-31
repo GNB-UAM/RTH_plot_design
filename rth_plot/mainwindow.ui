@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1401</width>
+    <width>1450</width>
     <height>789</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1401</width>
+    <width>510</width>
     <height>789</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1401</width>
+    <width>1450</width>
     <height>789</height>
    </size>
   </property>
@@ -685,7 +685,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QFrame" name="frame_resume">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>510</x>
       <y>10</y>
       <width>461</width>
       <height>771</height>
@@ -783,7 +783,8 @@ p, li { white-space: pre-wrap; }
       <string/>
      </property>
      <property name="icon">
-      <iconset theme="reload"/>
+      <iconset theme="reload">
+       <normaloff>.</normaloff>.</iconset>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit">
@@ -866,7 +867,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QFrame" name="frame_notes">
     <property name="geometry">
      <rect>
-      <x>930</x>
+      <x>980</x>
       <y>10</y>
       <width>461</width>
       <height>771</height>
@@ -955,13 +956,35 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Save file</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="push_resize">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>370</y>
+      <width>41</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>&gt;&gt;</string>
+    </property>
    </widget>
   </widget>
  </widget>
