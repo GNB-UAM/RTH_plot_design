@@ -22,6 +22,8 @@ pyuic5 rth_plot/mainwindow.ui -o plot_lib/plot_interface.py
 - plot_lib/ contains also the rest of the code use for plots
 
 ## How to include in RTHybrid
+Instructions for devs, Plot designer is included by default in full RTHybrid program.
+
 Just copy these files in RTHybrid root folder:
 - plot_main.pyw
 - plot.sh
