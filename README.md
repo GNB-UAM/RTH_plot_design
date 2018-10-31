@@ -1,7 +1,7 @@
+# RTHybrid Plot Designer 
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/GNB-UAM/RTHybrid"> <img src="assets/logo_rthy.png?raw=true" width="100" height="100"> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/GNB-UAM"> <img src="assets/logo_gnb.png?raw=true" width="100" height="100"> </a>
 
-# RTHybrid Plot Designer 
 Auxiliary Qt project to design and test the UI of the RTHybrid Plot Tool
 
 ## RTHybrid
