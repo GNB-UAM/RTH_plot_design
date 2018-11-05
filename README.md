@@ -5,12 +5,13 @@
 Auxiliary Qt project to design and test the UI of the RTHybrid Plot Tool
 
 ## RTHybrid
-For more information about full RTHybrid please check out:
+**> Read RTHybrid principal project to use and cite this work**
 
-#### https://github.com/GNB-UAM/RTHybrid 
+For more information about RTHybrid please check out:
 
-##### - Read RTHybrid project to use and cite this work
-##### - Stable code of this repository is included in RTHybrid and is the one to use
+https://github.com/GNB-UAM/RTHybrid
+
+**Note:** Stable code of this repository is included in RTHybrid and is the one to use
 
 ## About
 - Qt Creator is use to design rth_plot/mainwindow.ui
